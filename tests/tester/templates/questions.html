@@ -1,0 +1,7 @@
+<p>{{ polls.name }}</p>
+<br>
+{% for question in questions %}
+<a href="{% url 'answer' question.id %}" >{{ question.title }}  </a>
+
+{% endfor %}
+

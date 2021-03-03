@@ -1,0 +1,10 @@
+{{ question.title }}
+{{ question.poll.points }}
+{% for choice in choices %}
+<p>{{ choice.variance }}</p>
+{% endfor %}
+<form method="POST" action="">
+{% csrf_token %}
+{{ form }}
+    <input type="submit"  name="Submit">
+</form>
